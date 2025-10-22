@@ -1,278 +1,132 @@
-* {
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Comic Sans MS", cursive;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-    color: #fff;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.thief-container {
-    margin: 40px 0;
-    position: relative;
-}
-
-.thief {
-    font-size: 200px;
-    animation: float 3s ease-in-out infinite;
-    display: inline-block;
-    filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.5));
-}
-
-.thief-image {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    animation: float 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.5));
-    border-radius: 20px;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-.money-bags {
-    margin-top: 20px;
-}
-
-.money {
-    font-size: 60px;
-    display: inline-block;
-    margin: 0 15px;
-    animation: spin 4s linear infinite;
-}
-
-.money:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-.money:nth-child(3) {
-    animation-delay: 1s;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg) scale(1); }
-    50% { transform: rotate(180deg) scale(1.2); }
-    100% { transform: rotate(360deg) scale(1); }
+marquee {
+    background-color: #ff0000;
+    color: #ffff00;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border: 5px solid #ffff00;
 }
 
 h1 {
     font-size: 120px;
-    font-weight: bold;
-    margin: 40px 0;
     color: #ff0000;
-    text-shadow:
-        0 0 10px #ff0000,
-        0 0 20px #ff0000,
-        0 0 40px #ff0000,
-        0 0 80px #ff0000;
-    animation: glow 2s ease-in-out infinite;
+    text-shadow: 5px 5px #ffff00;
+    margin: 20px;
+    letter-spacing: 10px;
 }
 
-@keyframes glow {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+h2 {
+    color: #ffff00;
+    font-size: 36px;
 }
 
-.glitch {
-    position: relative;
-}
-
-.tagline {
-    margin: 40px 0;
-}
-
-.big-text {
-    font-size: 42px;
-    font-weight: bold;
-    color: #ffcc00;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.sub-text {
-    font-size: 24px;
-    color: #ccc;
-    font-style: italic;
-}
-
-.warning-box {
-    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-    border: 3px solid #ffcc00;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 50px auto;
-    max-width: 800px;
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-}
-
-.warning-box h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.warning-box p {
-    font-size: 20px;
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin: 50px 0;
-}
-
-.feature {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid #ffcc00;
-    border-radius: 15px;
-    padding: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 204, 0, 0.3);
-}
-
-.feature h3 {
+h3 {
+    color: #ff0000;
     font-size: 28px;
-    margin-bottom: 15px;
-    color: #ffcc00;
 }
 
-.feature p {
-    font-size: 18px;
-    color: #ccc;
+.thief-img {
+    max-width: 400px;
+    border: 8px solid #ff0000;
+    margin: 20px;
+    image-rendering: pixelated;
 }
 
-.cta-section {
-    margin: 60px 0;
+.big {
+    font-size: 28px;
+    color: #00ff00;
 }
 
-.cta-button {
+.box {
+    border: 5px dashed #ff0000;
+    background-color: #ffff00;
+    color: #000000;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    transform: rotate(-2deg);
+}
+
+.box p {
+    margin: 10px;
+    font-size: 20px;
+}
+
+table {
+    color: #ffff00;
+    font-size: 22px;
+    margin: 20px auto;
+}
+
+.buy-btn {
     display: inline-block;
-    background: linear-gradient(135deg, #ffcc00 0%, #ff9900 100%);
-    color: #000;
+    background-color: #ff0000;
+    color: #ffff00;
     font-size: 32px;
     font-weight: bold;
-    padding: 25px 50px;
-    border-radius: 50px;
+    padding: 20px 40px;
+    border: 5px solid #ffff00;
     text-decoration: none;
-    text-transform: uppercase;
-    box-shadow: 0 10px 30px rgba(255, 204, 0, 0.5);
-    transition: all 0.3s ease;
-    border: 3px solid #000;
+    margin: 20px;
+    cursor: pointer;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 15px 40px rgba(255, 204, 0, 0.8);
-}
-
-.disclaimer {
-    margin-top: 20px;
-    font-size: 18px;
+.buy-btn:hover {
+    background-color: #ffff00;
     color: #ff0000;
-    font-style: italic;
+    border: 5px solid #ff0000;
 }
 
-.heist-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin: 50px 0;
+.small {
+    font-size: 14px;
+    color: #666666;
 }
 
-.stat {
-    background: rgba(255, 0, 0, 0.1);
-    border: 2px solid #ff0000;
-    border-radius: 15px;
-    padding: 30px;
-}
-
-.stat-value {
-    font-size: 48px;
-    font-weight: bold;
-    color: #ffcc00;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 18px;
-    color: #ccc;
-    text-transform: uppercase;
-}
-
-footer {
-    margin: 60px 0 20px;
-    padding: 30px;
-    border-top: 2px solid #333;
-}
-
-footer p {
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #333333;
+    color: #00ff00;
     font-size: 16px;
-    color: #999;
-    margin: 10px 0;
+}
+
+blink {
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {
-    .thief {
-        font-size: 120px;
-    }
-
-    .thief-image {
-        max-width: 300px;
-    }
-
     h1 {
         font-size: 60px;
     }
 
-    .big-text {
-        font-size: 28px;
-    }
-
-    .sub-text {
-        font-size: 18px;
-    }
-
-    .warning-box h2 {
+    h2 {
         font-size: 24px;
     }
 
-    .warning-box p {
+    .thief-img {
+        max-width: 250px;
+    }
+
+    .buy-btn {
+        font-size: 24px;
+        padding: 15px 30px;
+    }
+
+    marquee {
         font-size: 16px;
-    }
-
-    .cta-button {
-        font-size: 24px;
-        padding: 20px 40px;
-    }
-
-    .money {
-        font-size: 40px;
     }
 }
